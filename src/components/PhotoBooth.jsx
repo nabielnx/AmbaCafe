@@ -14,7 +14,7 @@ const THEMES = [
     borderColor: '#ffffff',
     textColor: '#c5a059',
     font: 'serif',
-    label: 'NabsCafe — EST. 2024',
+    label: 'Ambacafe — EST. 2024',
     padding: 30
   },
   {
@@ -25,7 +25,7 @@ const THEMES = [
     borderColor: '#c5a059',
     textColor: '#f4efe6',
     font: 'serif',
-    label: 'N A B S C A F E',
+    label: 'A M B A C A F E',
     padding: 24
   },
   {
