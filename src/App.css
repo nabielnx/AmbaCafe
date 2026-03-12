@@ -1,0 +1,19 @@
+.app-container {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+  position: relative;
+}
+
+/* Hero buttons — row on desktop */
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: auto;
+  }
+}

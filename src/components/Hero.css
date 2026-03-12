@@ -1,0 +1,130 @@
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.hero-cta-sep {
+  color: var(--accent-gold);
+  opacity: 0.35;
+  font-size: 1.2rem;
+}
+.hero-cta-link {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sandstone-cream);
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.4s ease;
+}
+.hero-cta-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--sandstone-cream);
+  opacity: 0.3;
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s ease;
+}
+.hero-cta-link:hover::after {
+  transform: scaleX(1);
+  opacity: 0.7;
+}
+.hero-cta-secondary {
+  color: rgba(249, 246, 240, 0.8);
+}
+.hero-cta-secondary::after {
+  background: var(--sandstone-cream);
+  opacity: 0.15;
+}
+.hero-cta-secondary:hover {
+  color: rgba(249, 246, 240, 0.85);
+}
+.hero-cta-secondary:hover::after {
+  opacity: 0.4;
+}
+@media (max-width: 767px) {
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-cta-sep { display: none; }
+}
+
+/* Book a Table — elegant inline CTA */
+.hero-book-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+.hero-book-line {
+  display: block;
+  width: 3.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold));
+  opacity: 0.3;
+}
+.hero-book-line:last-child {
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+}
+.hero-book-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.hero-book-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: var(--accent-gold);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hero-book-btn:hover::after {
+  left: 0;
+  width: 100%;
+}
+.hero-book-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  opacity: 0.8;
+  font-weight: 700;
+}
+.hero-book-sub {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--sandstone-cream);
+  font-style: italic;
+  transition: color 0.4s ease;
+}
+.hero-book-btn:hover .hero-book-sub {
+  color: var(--accent-gold);
+}
+.hero-book-btn:hover .hero-book-label {
+  opacity: 1;
+}
+@media (max-width: 767px) {
+  .hero-book-wrapper { gap: 1.2rem; margin-top: 2rem; }
+  .hero-book-line { width: 2rem; }
+  .hero-book-sub { font-size: 0.9rem; }
+}
